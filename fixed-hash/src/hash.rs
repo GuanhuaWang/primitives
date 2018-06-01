@@ -351,7 +351,7 @@ macro_rules! impl_std_for_hash {
 				format!("{:?}", self)
 			}
 		}
-
+/*
 		impl $crate::rand::Rand for $from {
 			fn rand<R: $crate::rand::Rng>(r: &mut R) -> Self {
 				let mut hash = $from::new();
@@ -359,7 +359,7 @@ macro_rules! impl_std_for_hash {
 				hash
 			}
 		}
-
+*/
 		impl ::core::str::FromStr for $from {
 			type Err = $crate::rustc_hex::FromHexError;
 
@@ -412,8 +412,9 @@ macro_rules! impl_std_for_hash_internals {
 
 		/// Assign self have a cryptographically random value.
 		pub fn randomize(&mut self) {
-			let mut rng = $crate::rand::OsRng::new().unwrap();
-			*self = $crate::rand::Rand::rand(&mut rng);
+			panic!("Unsupported")
+//			let mut rng = $crate::rand::OsRng::new().unwrap();
+//			*self = $crate::rand::Rand::rand(&mut rng);
 		}
 	}
 }

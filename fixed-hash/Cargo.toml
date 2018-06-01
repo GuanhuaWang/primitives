@@ -8,7 +8,6 @@ description = "Fixed-size hashes"
 
 [dependencies]
 heapsize = { version = "0.4", optional = true }
-rand = { version = "0.4", optional = true }
 rustc-hex = { version = "1.0", optional = true }
 quickcheck = { version = "0.6", optional = true }
 
@@ -17,6 +16,6 @@ libc = { version = "0.2", optional = true, default-features = false }
 
 [features]
 default = ["libc"]
-std = ["rustc-hex", "rand"]
+std = ["rustc-hex"]
 heapsizeof = ["heapsize"]
 impl_quickcheck_arbitrary = ["quickcheck"]

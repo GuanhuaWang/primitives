@@ -28,9 +28,9 @@ pub extern crate core;
 #[doc(hidden)]
 pub extern crate rustc_hex;
 
-#[cfg(feature="std")]
-#[doc(hidden)]
-pub extern crate rand;
+//#[cfg(feature="std")]
+//#[doc(hidden)]
+//pub extern crate rand;
 
 #[cfg(feature="impl_quickcheck_arbitrary")]
 #[doc(hidden)]
